@@ -1,4 +1,4 @@
-# Immo Investment Cockpit · Österreich · Modell 2
+# Immo Investment Cockpit · Österreich · Modell 3
 
 Kostenlose statische Webapp ohne Build, Server oder externe Abhängigkeiten.
 Eingaben bleiben im Browser (`localStorage`); JSON-Import älterer Versionen bleibt möglich.
@@ -7,7 +7,7 @@ Eingaben bleiben im Browser (`localStorage`); JSON-Import älterer Versionen ble
 
 `index.html` über einen statischen Webserver öffnen. GitHub Pages veröffentlicht `main` / Repository-Stamm.
 
-Modelltests: `node --test model.test.cjs` (Node.js 18 oder neuer).
+Modelltests: `node --test model.test.cjs rental.test.cjs` (Node.js 18 oder neuer).
 
 ## Funktionen
 
@@ -48,3 +48,32 @@ Identisches Anfangskapital und identische externe Zuschüsse. Positive Immobilie
 - [BMF · Instandsetzung](https://findok.bmf.gv.at/findok/volltext?segmentId=2a19c4fa-f445-4685-b352-3cb766c46d88)
 - [BMF · Liebhaberei](https://findok.bmf.gv.at/findok/volltext?segmentId=122eaa17-0686-406b-a344-bbd9e6886f01)
 - [BMF · Fonds / Steuerbasis](https://findok.bmf.gv.at/findok/volltext?segmentId=f6bebe28-8310-4cb0-a917-4e70e8d89541)
+
+
+## Mietrecht · ergänzt 22.10.2026
+
+Drei Schaltflächen: freier Mietzins (MRG-Teilanwendung oder ausdrücklich außerhalb MRG), Genossenschaftskauf nach § 15h WGG, sonstige MRG-Fälle mit manuell geprüfter unbefristeter Obergrenze.
+
+- § 15h: geförderte Errichtung/Finanzierung, Übertragung an bisherigen Mieter bzw. Erwerbskette, maßgeblicher Antrag/Angebot ab 1.8.2019 (§ 39 Abs. 36), Datum des ersten Kaufvertrags, Wohnnutzfläche, Bundesland, Gebäude ab 9.5.1945 und geprüfte verbleibende Förderungs-/Vertragsbindungen erforderlich.
+- Direkter Anlegerkauf, sofortige Eigentumsübertragung, ungeklärte oder alte Fälle werden nicht automatisch als 15h-Fall qualifiziert. Unvollständige Angaben sperren Ergebnisse und CSV statt eine rechtliche Einordnung zu erfinden.
+- 15 Jahre ab erstem Kaufvertrag, kein Neustart durch Weiterverkauf. Hauptmietzinsgrenze = reiner Landesrichtwert × Fläche; befristet 25 % Abschlag. Kein Lagezuschlag. Niedrigere Wunschmiete wird nicht angehoben.
+- Bekannte Landesrichtwerte vor/nach April 2026 gemäß Statistik Austria. Zukünftige Richtwerte werden mit einer gekennzeichneten VPI-Annahme projiziert: 2027 maximal +2 %, ab 2028 über 3 % nur halbe Überschreitung, gesetzliche Cent-Rundung.
+- MieWeG bei MRG-Voll-/Teilanwendung: jährlicher April-Termin, bei Vollanwendung im Modell Mai unter Annahme rechtzeitiger Mitteilung (§ 16 Abs. 9 MRG). Erste Valorisierung zeitanteilig nach vollen Monaten nach Vertragsabschluss; keine automatische Anpassung im Abschlussjahr. Vertragsgrenze kann die Erhöhung weiter begrenzen; ohne gültige Klausel keine Erhöhung.
+- Mindestbefristung ab 2026: fünf Jahre bei Unternehmern, drei Jahre bei Nichtunternehmern. Fortsetzung zu gleichen Konditionen angenommen. Kein Marktmietensprung bei Fristablauf.
+- Mietvertragsdatum = Beginn der Einnahmen; anteilige Kalendermonate. AfA unterstellt weiterhin steuerliche Vermietungsbereitschaft ab Januar; abweichender Beginn ist nicht automatisch beurteilt.
+- Zusätzliche Einnahmen müssen im MRG-Modus eigenständig rechtlich geprüft sein. Sie dürfen die Obergrenze nicht umgehen. Förderungsgrenzen können zusätzlich als konstante absolute Grenze eingegeben werden.
+- Alte Mietverträge vor 2026, individuelle Indexklauseln, Förderungsrecht, allgemeine Altbau-/Kategorie-/Zuschlagsberechnung und Verkaufs-/Nachzahlungsansprüche nach §§ 15g/15i WGG sind keine automatische Rechtsprüfung. Sonstige MRG-Grenzen sind manuell einzutragen.
+
+Die ursprüngliche Aussage „Mietrecht nicht modelliert“ gilt damit nur noch für diese ausdrücklich genannten Sonderfälle.
+
+### Zusätzliche Primärquellen
+
+- https://www.ris.bka.gv.at/eli/bgbl/1979/139/A1P15h/NOR40244830
+- https://ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10011509
+- https://www.statistik.at/fileadmin/pages/2114/VOe_Richtwerte_Kategoriemieten_20260401.pdf
+- https://ris.bka.gv.at/eli/bgbl/i/2025/114/P1/NOR40274266
+- https://www.oesterreich.gv.at/de/themen/bauen_und_wohnen/wohnen/3/Seite.210215
+
+## ETF-Eingabe verständlicher benannt
+
+„Geschätzte jährliche ETF-Steuerbasis (% vom Depot)“ ersetzt die missverständliche frühere Bezeichnung. 2 % sind eine Annahme zur Bemessungsgrundlage, kein Steuersatz und keine zusätzliche Rendite. Beispiel: 10.000 € Depotwert → 200 € angenommener laufender steuerpflichtiger Ertrag → 55 € KESt bei 27,5 %, vor möglicher Teilverkaufssteuer. Die tatsächlichen Fondsmeldedaten sind ausschlaggebend. An der bisherigen ETF-Rechenlogik ändert diese Erläuterung nichts.
