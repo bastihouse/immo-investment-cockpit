@@ -14,3 +14,5 @@ test('minimum term is three years for non-business landlord and five for busines
 test('manual MRG cap is distinct from 15h regional rule',()=>{const r=run({...defaults,rentalMode:'manual',manualCap:800,leaseFixed:'yes'});assert.ok(r.rental.valid);near(r.rental.initialRent,600)});
 test('lease date supports mid-year start and December zero first-proration',()=>{const r=run({...wgg,leaseDate:'2026-12-01',rent:300,horizon:2});near(r.first.income,300*.96);near(r.months.find(m=>m.calendar===2027&&m.month===5).contractRent,300)});
 test('monthly legal rents reconcile to income, cashflow and taxes',()=>{const r=run({...wgg,leaseFixed:'yes'});for(const q of r.rows){const mm=r.months.filter(m=>m.year===q.year);near(mm.reduce((a,m)=>a+m.income,0),q.income);near(mm.reduce((a,m)=>a+m.afterTax,0),q.afterTax);for(const m of mm)if(m.rentCap!==null)assert.ok(m.contractRent<=m.rentCap+.001)}});
+
+test('fractional-area ceilings are never rounded above the legal maximum',()=>{const r=run({...wgg,area:70.123,leaseFixed:'yes'});assert.ok(r.rental.initialRent<=6.85*70.123*.75);near(r.rental.initialCap,r.rental.initialRent)});
