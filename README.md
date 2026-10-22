@@ -20,7 +20,7 @@ Modelltests: `node --test model.test.cjs rental.test.cjs` (Node.js 18 oder neuer
 
 ## Steuerlicher Umfang · geprüft 20.10.2026
 
-Das Modell bildet einen **Neukauf und ganzjährig ab Januar beginnende private Wohnraumvermietung** ab. Es ist kein Steuerbescheid.
+Das Modell bildet einen **Neukauf im Januar und private Wohnraumvermietung mit wählbarem Mietvertragsbeginn** ab. Es ist kein Steuerbescheid.
 
 - Aktivierbare Erwerbsnebenkosten sind Bestandteil der Anschaffungskosten. Kreditgebühren sind nicht in dieser Position enthalten.
 - Gebäude-AfA auf Gebäudeanteil inklusive anteiliger Erwerbsnebenkosten; Grundstück nicht abschreibbar. Kapitalisierte Herstellungskosten werden zur Gebäudebasis addiert.
