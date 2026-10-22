@@ -16,3 +16,6 @@ Cashflows, Steuern, Szenarien, CSV und Erklärungstab verwenden den tatsächlich
 ETF-Steuerbasis verständlich erklärt und umbenannt. Grenzen/Quellen siehe README und Erklärungstab.
 
 Browserprüfung: Auswahl, Sperre bei unvollständigen Angaben, Testfall NÖ 70 m² und Cent-Anzeige geprüft. Gesetzliche Obergrenzen werden nicht auf höhere Centbeträge aufgerundet.
+
+## Update · Modell 4 · 22.10.2026
+ETF-Proxy ersatzlos entfernt, Altwerte ignoriert; stattdessen Barausschüttungsquote mit Netto-Wiederanlage und Verkaufsteuer. Vereinfachung und fehlende ausschüttungsgleiche Erträge deutlich in Eingabe, Vergleich und Erklärung offengelegt. Info-Dialog mit 5-/10-/20-Jahres-Indexrenditen bis 30.06.2026 (USD, Quellen und Varianten erläutert). Miete/Ausgaben zusammengefasst; MRG-Schalter und bedingte Felder statt drei gleichrangiger Modusbuttons. JSON-Version 4.

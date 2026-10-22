@@ -1,4 +1,4 @@
-# Immo Investment Cockpit · Österreich · Modell 3
+# Immo Investment Cockpit · Österreich · Modell 4
 
 Kostenlose statische Webapp ohne Build, Server oder externe Abhängigkeiten.
 Eingaben bleiben im Browser (`localStorage`); JSON-Import älterer Versionen bleibt möglich.
@@ -32,7 +32,7 @@ Das Modell bildet einen **Neukauf im Januar und private Wohnraumvermietung mit w
 - Verkauf: Anschaffungskosten inklusive aktivierbarer Erwerbsnebenkosten, Herstellungsaufwand bzw. noch nicht abgesetzter Instandsetzung, abzüglich kumulierter Gebäude-AfA. Mitteilungs-/Selbstberechnungskosten gesondert abgezogen; übrige Verkaufskosten nur in der Liquidität. Standard-ImmoESt 30 % auf positiven Gewinn. Kein automatischer Verkaufverlustausgleich.
 - Keine Hauptwohnsitz-/Herstellerbefreiung, Altvermögen, Umwidmung, Regelbesteuerungsoption, Umsatzsteuer/Vorsteuer oder Förderungen. Keine Halbjahres-AfA, da Januarbeginn.
 - Kleine Vermietung ab 2024: 25-Jahres-Indikator ohne Verkaufsgewinn; keine vollständige Liebhabereiprognose oder steuerliche Anerkennung. Tatsächlicher Rahmen grundsätzlich 25 Jahre ab Vermietungsbeginn / höchstens 28 Jahre ab ersten Aufwendungen.
-- ETF: **Näherung** für laufenden steuerpflichtigen Ertrag als frei wählbarer Prozentsatz des Depotwerts vor jährlicher Steuer. Dieser Wert ist keine gesetzliche Pauschale. Fortschreibung der Steuerbasis; Steuerzahlung aus Teilverkauf inklusive dessen Gewinnsteuer und proportionaler Basisreduktion; bei Endverkauf KESt auf verbleibenden positiven Gewinn. Keine konkreten OeKB-Meldedaten, Quellensteuer, Ausschüttungs-/Meldetermine oder Verlustverrechnung.
+- ETF: **Vereinfachte Ausschüttungs-/Verkaufsrechnung**. Keine automatische 2-%-Steuerbasis. Editierbare Barausschüttungsquote (Standard 0), bereits in der Gesamtrendite enthalten. Monatliche KESt auf Ausschüttung, Netto-Wiederanlage erhöht Anschaffungskosten; Endverkauf besteuert positiven Restgewinn. Ausschüttungsgleiche Erträge und Quellensteueranrechnung fehlen ausdrücklich, daher kann die Thesaurierungsvariante zu günstig erscheinen. Alte etfTaxableYield-Werte werden ignoriert.
 
 ## Vergleichskonvention
 
@@ -52,7 +52,7 @@ Identisches Anfangskapital und identische externe Zuschüsse. Positive Immobilie
 
 ## Mietrecht · ergänzt 22.10.2026
 
-Drei Schaltflächen: freier Mietzins (MRG-Teilanwendung oder ausdrücklich außerhalb MRG), Genossenschaftskauf nach § 15h WGG, sonstige MRG-Fälle mit manuell geprüfter unbefristeter Obergrenze.
+Ein MRG-Schalter, darunter die rechtliche Einordnung: MRG-Teilanwendung mit freiem Mietzins, Genossenschaftskauf nach § 15h WGG oder andere geprüfte Obergrenze. Bei MRG aus: ausdrücklich außerhalb MRG.
 
 - § 15h: geförderte Errichtung/Finanzierung, Übertragung an bisherigen Mieter bzw. Erwerbskette, maßgeblicher Antrag/Angebot ab 1.8.2019 (§ 39 Abs. 36), Datum des ersten Kaufvertrags, Wohnnutzfläche, Bundesland, Gebäude ab 9.5.1945 und geprüfte verbleibende Förderungs-/Vertragsbindungen erforderlich.
 - Direkter Anlegerkauf, sofortige Eigentumsübertragung, ungeklärte oder alte Fälle werden nicht automatisch als 15h-Fall qualifiziert. Unvollständige Angaben sperren Ergebnisse und CSV statt eine rechtliche Einordnung zu erfinden.
@@ -76,4 +76,11 @@ Die ursprüngliche Aussage „Mietrecht nicht modelliert“ gilt damit nur noch 
 
 ## ETF-Eingabe verständlicher benannt
 
-„Geschätzte jährliche ETF-Steuerbasis (% vom Depot)“ ersetzt die missverständliche frühere Bezeichnung. 2 % sind eine Annahme zur Bemessungsgrundlage, kein Steuersatz und keine zusätzliche Rendite. Beispiel: 10.000 € Depotwert → 200 € angenommener laufender steuerpflichtiger Ertrag → 55 € KESt bei 27,5 %, vor möglicher Teilverkaufssteuer. Die tatsächlichen Fondsmeldedaten sind ausschlaggebend. An der bisherigen ETF-Rechenlogik ändert diese Erläuterung nichts.
+Die frühere 2-%-Steuerbasis wurde entfernt. Sie wird auch aus alten Browserdaten/JSON-Dateien nicht übernommen. Die neue Ausschüttungsquote startet bei 0. Das Modell ist ausdrücklich keine vollständige österreichische Fondssteuerrechnung: auch ohne Auszahlung/Verkauf können ausschüttungsgleiche Erträge anfallen.
+
+## Update · Eingaben und Indexinfo (22.10.2026)
+
+Miete, Leerstand und laufende Ausgaben bilden einen gemeinsamen Bereich. Ein MRG-Schalter aktiviert Voll-/Teilanwendung; darunter werden Genossenschaftskauf, Teilanwendung oder andere geprüfte Grenze ausgewählt. Bei MRG aus wird tatsächlich außerhalb MRG gerechnet. Bestehende v3-MRG-Eingaben bleiben erhalten.
+
+Info-Dialog direkt bei ETF-Rendite: annualisierte USD-Renditen bis 30.06.2026, Start 30.06.2021/2016/2006. MSCI World Net Return: 11,5 / 13,1 / 8,7 % (veröffentlichte Rundung auf eine Dezimalstelle). S&P 500 Total Return: 13,41 / 15,51 / 11,39 %. Wiederangelegte Dividenden; MSCI nach standardisierter Quellensteuer, S&P vor Quellensteuer. Keine österreichische KESt/ETF-Gebühren; EUR-Rendite weicht ab. Keine automatische Übernahme in Prognose.
+Quellen: https://www.walterscott.com/strategies/global-equity/global-equity-usd/ (MSCI-Benchmark per 30.06.2026) und https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-mid-year-2026.pdf (Report 3, S. 21). Die Quelle von Walter Scott wird als Index-Benchmark verwendet, nicht die Rendite des aktiven Fonds.
