@@ -28,3 +28,6 @@ Dashboard und Anfang des Erklärungstabs beschreiben ausdrücklich den Vergleich
 
 ## Einzahlungen im Vermögenschart · 26.10.2026
 Dashboard und ETF-Vergleich zeigen zusätzlich orange die kumulierten eigenen Einzahlungen (invested = external: eingesetztes Eigenkapital plus externe Zuschüsse). Mietüberschüsse und Renditen werden nicht als eigene Einzahlung gezählt. Tooltips enthalten die neue Serie. Rechenmodell unverändert.
+
+## Rücklagenhilfe · 26.10.2026
+WEG-Rücklagenfeld erklärt gemeinsamen Spartopf, eigenen Monatsanteil laut Hausverwaltung, Cashfloweffekt, steuerliche Behandlung und Modellgrenze. Instandhaltungshilfe grenzt zusätzlich selbst bezahlte Reparaturen ab. Keine Änderung der Berechnung.
