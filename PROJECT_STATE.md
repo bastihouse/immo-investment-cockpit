@@ -31,3 +31,6 @@ Dashboard und ETF-Vergleich zeigen zusätzlich orange die kumulierten eigenen Ei
 
 ## Rücklagenhilfe · 26.10.2026
 WEG-Rücklagenfeld erklärt gemeinsamen Spartopf, eigenen Monatsanteil laut Hausverwaltung, Cashfloweffekt, steuerliche Behandlung und Modellgrenze. Instandhaltungshilfe grenzt zusätzlich selbst bezahlte Reparaturen ab. Keine Änderung der Berechnung.
+
+## Endvermögens-Aufschlüsselung · 26.10.2026
+Dashboard: additive Überleitung aus Startkapital minus Kaufnebenkosten/Startrenovierung plus Tilgung/Wertänderung/Cash-Guthaben minus Verkaufskosten/ImmoESt. Ergänzende Kredit-/Cashflow-Summen und Differenz zu eigenen Einzahlungen. Keine erneute Addition der Zuschüsse oder doppelter Kostenabzug. Rechenmodell unverändert.
