@@ -19,3 +19,6 @@ Browserprüfung: Auswahl, Sperre bei unvollständigen Angaben, Testfall NÖ 70 m
 
 ## Update · Modell 4 · 22.10.2026
 ETF-Proxy ersatzlos entfernt, Altwerte ignoriert; stattdessen Barausschüttungsquote mit Netto-Wiederanlage und Verkaufsteuer. Vereinfachung und fehlende ausschüttungsgleiche Erträge deutlich in Eingabe, Vergleich und Erklärung offengelegt. Info-Dialog mit 5-/10-/20-Jahres-Indexrenditen bis 30.06.2026 (USD, Quellen und Varianten erläutert). Miete/Ausgaben zusammengefasst; MRG-Schalter und bedingte Felder statt drei gleichrangiger Modusbuttons. JSON-Version 4.
+
+## Modell 5 · 26.10.2026
+Eigenkapital-Schnellwahl 10/20 % des Kaufpreises; kompakte Eingabe-Info-Symbole; getrennte Immobilien-/ETF-Gruppen; dynamische Erklärung vorhandener AfA/ESt-Wirkung. EUR-Net-Return-Orientierungswerte mit offener FX-Methodik und ausdrücklich als Sekundärangabe gekennzeichnetem S&P-20J-Wert. Details/Provenienz README und Info-Dialog. Steuer-/Miet-Rechenlogik unverändert.
