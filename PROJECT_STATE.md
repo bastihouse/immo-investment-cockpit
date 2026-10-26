@@ -22,3 +22,6 @@ ETF-Proxy ersatzlos entfernt, Altwerte ignoriert; stattdessen Barausschüttungsq
 
 ## Modell 5 · 26.10.2026
 Eigenkapital-Schnellwahl 10/20 % des Kaufpreises; kompakte Eingabe-Info-Symbole; getrennte Immobilien-/ETF-Gruppen; dynamische Erklärung vorhandener AfA/ESt-Wirkung. EUR-Net-Return-Orientierungswerte mit offener FX-Methodik und ausdrücklich als Sekundärangabe gekennzeichnetem S&P-20J-Wert. Details/Provenienz README und Info-Dialog. Steuer-/Miet-Rechenlogik unverändert.
+
+## Leitfrage · 26.10.2026
+Dashboard und Anfang des Erklärungstabs beschreiben ausdrücklich den Vergleich einer ausschließlich vermieteten Kapitalanlage mit ETFs bei identischen eigenen Einzahlungen und Verkauf zum Ende des Horizonts. Erklärung enthält Cash-Guthaben und zusätzliche Einzahlungen. Rechenlogik unverändert.
