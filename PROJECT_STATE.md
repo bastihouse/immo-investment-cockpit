@@ -25,3 +25,6 @@ Eigenkapital-Schnellwahl 10/20 % des Kaufpreises; kompakte Eingabe-Info-Symbole;
 
 ## Leitfrage · 26.10.2026
 Dashboard und Anfang des Erklärungstabs beschreiben ausdrücklich den Vergleich einer ausschließlich vermieteten Kapitalanlage mit ETFs bei identischen eigenen Einzahlungen und Verkauf zum Ende des Horizonts. Erklärung enthält Cash-Guthaben und zusätzliche Einzahlungen. Rechenlogik unverändert.
+
+## Einzahlungen im Vermögenschart · 26.10.2026
+Dashboard und ETF-Vergleich zeigen zusätzlich orange die kumulierten eigenen Einzahlungen (invested = external: eingesetztes Eigenkapital plus externe Zuschüsse). Mietüberschüsse und Renditen werden nicht als eigene Einzahlung gezählt. Tooltips enthalten die neue Serie. Rechenmodell unverändert.
