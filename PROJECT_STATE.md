@@ -37,3 +37,6 @@ Dashboard: additive Überleitung aus Startkapital minus Kaufnebenkosten/Startren
 
 ## Finanzierung: Zinsvorschau · 02.11.2026
 Direkt unter der Kreditlaufzeit stehen die berechneten Kreditzinsen im ersten Jahr als Jahressumme und monatlicher Durchschnitt. Aktualisierung mit jeder Eingabe aus demselben Tilgungsplan wie Cashflow und Steuer. Erläuterung trennt Zinsen, Tilgung und Gebühren. Berechnungsmodell unverändert.
+
+## Wohnungskauf ohne Anfangsrenovierung · 02.11.2026
+Standardfall explizit Neubau- oder Bestandswohnung zur privaten Vermietung. Renovierungsbetrag und steuerliche Art hinter standardmäßig ausgeschaltetem Schalter. Ausschalten setzt den Betrag auf 0; gespeicherte/importierte positive Altbeträge öffnen die Option automatisch. Endvermögen zeigt Renovierungsbaustein nur bei positivem Betrag. AfA, MRG, WEG-Rücklage und laufende Instandhaltung bleiben separat. JSON-Version 6; Parameter und Modell kompatibel, keine neue Steuerlogik.
