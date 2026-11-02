@@ -34,3 +34,6 @@ WEG-Rücklagenfeld erklärt gemeinsamen Spartopf, eigenen Monatsanteil laut Haus
 
 ## Endvermögens-Aufschlüsselung · 26.10.2026
 Dashboard: additive Überleitung aus Startkapital minus Kaufnebenkosten/Startrenovierung plus Tilgung/Wertänderung/Cash-Guthaben minus Verkaufskosten/ImmoESt. Ergänzende Kredit-/Cashflow-Summen und Differenz zu eigenen Einzahlungen. Keine erneute Addition der Zuschüsse oder doppelter Kostenabzug. Rechenmodell unverändert.
+
+## Finanzierung: Zinsvorschau · 02.11.2026
+Direkt unter der Kreditlaufzeit stehen die berechneten Kreditzinsen im ersten Jahr als Jahressumme und monatlicher Durchschnitt. Aktualisierung mit jeder Eingabe aus demselben Tilgungsplan wie Cashflow und Steuer. Erläuterung trennt Zinsen, Tilgung und Gebühren. Berechnungsmodell unverändert.
